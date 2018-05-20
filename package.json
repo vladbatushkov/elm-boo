@@ -4,9 +4,16 @@
   "description": "elm entry template",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --colors",
+    "watch": "webpack --watch --colors"
   },
   "repository": "https://github.com/vladbatushkov/elm-boo.git",
   "author": "Batushkov, Vlad <vlad.batushkov@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "name": "elm-boo",
+  "version": "0.1.0",
+  "description": "elm entry template",
+  "main": "index.js",
+  "repository": "https://github.com/vladbatushkov/elm-boo.git",
+  "author": "Batushkov, Vlad <vlad.batushkov@gmail.com>",
+  "license": "MIT"
+}

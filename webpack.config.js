@@ -17,5 +17,11 @@ module.exports = {
             loader: 'elm-webpack-loader?verbose=true&warn=true',
         }],
         noParse: /\.elm$/
+    },
+    devServer: {
+        inline: true,
+        stats: {
+            colors: true
+        }
     }
 };

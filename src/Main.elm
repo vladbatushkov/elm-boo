@@ -1,6 +1,7 @@
 module Main exposing (..)
 
 import Html exposing (..)
+import Html.Attributes exposing (..)
 
 
 main : Program Flags Model Msg
@@ -47,7 +48,7 @@ view : Model -> Html Msg
 view model =
     div
         []
-        [ h1 [] [ text model.title ]
+        [ h1 [ class "header" ] [ text model.title ]
         , div []
             [ h3 [] [ text <| "width : " ++ toString model.globalWidth ]
             , h3 [] [ text <| "height : " ++ toString model.globalHeight ]

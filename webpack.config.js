@@ -12,10 +12,18 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.elm$/,
-            exclude: [/elm-stuff/, /node_modules/],
-            loader: 'elm-webpack-loader?verbose=true&warn=true',
-        }],
+                test: /\.elm$/,
+                exclude: [/elm-stuff/, /node_modules/],
+                loader: 'elm-webpack-loader?verbose=true&warn=true',
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            }
+        ],
         noParse: /\.elm$/
     },
     devServer: {

@@ -1,5 +1,6 @@
 'use strict';
 
+import './styles.css';
 var Elm = require('./Main.elm');
 
 var node = document.getElementById('main');

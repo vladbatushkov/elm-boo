@@ -1,11 +1,10 @@
 'use strict';
-import _ from 'lodash';
 
-function component() {
-    var element = document.createElement('div');
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    return element;
-}
+var Elm = require('./Main.elm');
 
-document.body.appendChild(component());
+var node = document.getElementById('main');
+var app = Elm.Main.embed(node, {
+    title: 'Elm-boo',
+    globalWidth: window.screen.width,
+    globalHeight: window.screen.height
+});

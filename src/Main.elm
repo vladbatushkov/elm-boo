@@ -1,5 +1,6 @@
 module Main exposing (..)
 
+import Config exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 
@@ -14,23 +15,16 @@ main =
         }
 
 
-type alias Flags =
-    { title : String
-    , globalWidth : Int
-    , globalHeight : Int
-    }
-
-
 type alias Model =
-    { title : String
-    , globalWidth : Int
-    , globalHeight : Int
+    { config : Config
     }
 
 
 init : Flags -> ( Model, Cmd Msg )
 init flags =
-    ( Model flags.title flags.globalWidth flags.globalHeight, Cmd.none )
+    ( Model (initConfig flags)
+    , Cmd.none
+    )
 
 
 type Msg
@@ -48,9 +42,10 @@ view : Model -> Html Msg
 view model =
     div
         []
-        [ h1 [ class "header" ] [ text model.title ]
-        , div []
-            [ h3 [] [ text <| "width : " ++ toString model.globalWidth ]
-            , h3 [] [ text <| "height : " ++ toString model.globalHeight ]
+        [ img [ src <| getImage ElmLogo model.config, class "logo" ] []
+        , span [ class "header" ] [ text model.config.title ]
+        , p [ class "config" ]
+            [ div [] [ text <| "width : " ++ toString model.config.globalWidth ]
+            , div [] [ text <| "height : " ++ toString model.config.globalHeight ]
             ]
         ]

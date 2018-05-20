@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "elm-make": "elm-make ./src/Main.elm --output ./dist/Main.html",
+    "elm-make": "elm-make ./src/Main.elm --output ./dist/Main.js",
     "build": "webpack --colors",
     "watch": "webpack --watch --colors",
     "start": "webpack-dev-server --output-public-path=/dist/ --port 3000"
@@ -16,6 +16,7 @@
   "dependencies": {
     "css-loader": "^0.28.11",
     "elm-webpack-loader": "^4.5.0",
+    "file-loader": "^1.1.11",
     "mini-css-extract-plugin": "^0.4.0",
     "style-loader": "^0.21.0",
     "webpack": "^4.8.3",

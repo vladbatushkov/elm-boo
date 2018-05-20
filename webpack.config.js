@@ -23,6 +23,16 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     "css-loader"
                 ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                exclude: [/node_modules/],
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "[path][name].[hash].[ext]",
+                    },
+                }
             }
         ],
         noParse: /\.elm$/

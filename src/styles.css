@@ -1,3 +1,15 @@
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
 .header {
-    color: red;
+    color: rgb(89, 98, 119);
+    font-size: 50pt;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.config {
+    color: rgb(95, 180, 203);
 }

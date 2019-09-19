@@ -1,5 +1,6 @@
 module Main exposing (..)
 
+import Browser exposing (..)
 import Config exposing (..)
 import Port exposing (..)
 import Html exposing (..)
@@ -9,7 +10,7 @@ import Html.Events exposing (..)
 
 main : Program Flags Model Msg
 main =
-    programWithFlags
+    Browser.element
         { init = init
         , update = update
         , subscriptions = subs
@@ -62,7 +63,7 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div []
-        [ div [ class "overlay", style [ ( "display", model.visible ) ] ]
+        [ div [ class "overlay", style "display" model.visible ]
             [ a [ class "closebtn", onClick CloseMsg ] [ text "×" ]
             , div [ class "overlay-content" ]
                 [ h1 [] [ text "Header" ]

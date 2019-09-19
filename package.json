@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "elm-make": "elm-make ./src/Main.elm --output ./dist/Main.js",
+    "make": "elm make ./src/Main.elm --output ./dist/Main.js",
     "build": "webpack --colors",
     "watch": "webpack --watch --colors",
     "start": "webpack-dev-server --output-public-path=/dist/ --port 3000"

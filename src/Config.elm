@@ -39,7 +39,7 @@ initConfig flags =
                 imgDict
 
         Err err ->
-            Debug.crash err
+            Debug.log (Json.Decode.errorToString err) (Config "" 0 0 [])
 
 
 imgsDecoder : Json.Decode.Decoder (List Img)
